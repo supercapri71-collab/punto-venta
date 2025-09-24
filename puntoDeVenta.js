@@ -10,7 +10,7 @@ calcularValorTotal = function () {
     let valorDescuento;
     let valorIVA;
     let valorTotal;
-    
+
 
     //1. Recuperar el nombre del producto como String
     nombreProducto = document.getElementById("txtProducto").value;
@@ -27,6 +27,7 @@ calcularValorTotal = function () {
     //5. Mostrar valorSubtotal en el componente lblSubtotal
     // Utilizar mostrarTexto
     valorSubtotal = calcularSubtotal(precioProducto, cantidad);
+    valorSubtotal = ValorSubtotal.toFixed(2);
     mostrarTexto("lblSubtotal", valorSubtotal);
     /*
        Caso de prueba: 
@@ -37,6 +38,7 @@ calcularValorTotal = function () {
     */
     //6. Invocar a calcularValorDescuento y lo que devuelve guardar en la variable valorDescuento
     valorDescuento = calcularValorDescuento(valorSubtotal, porcentajeDescuento);
+    valorDescuento = valorDescuento.toFixed(2);
     mostrarTexto("lblDescuento", valorDescuento);
     //7. Mostrar el resultado en el componente lblDescuento
     /*
@@ -50,6 +52,7 @@ calcularValorTotal = function () {
     //8. Invocar a calcularIVA y lo que devuelve guardar en la variable valorIVA
     let monto = valorSubtotal - valorDescuento;
     valorIVA = calcularIva(monto);
+   // valorIVA = valorIVA.toFixed(2);
     mostrarTexto("lblValorIVA", valorIVA);
     // El IVA debe calcularse sobre el valor del subtotal menos el descuento
     //9. Mostrar el resultado en el componente lblValorIVA    
@@ -69,9 +72,9 @@ calcularValorTotal = function () {
         Si el caso de prueba es exitoso, hacer un commit
     */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
-    valorTotal=calcularTotal(valorSubtotal,valorDescuento,valorIVA);
+    valorTotal = calcularTotal(valorSubtotal, valorDescuento, valorIVA);
     //11. Mostrar el resultado en el componente lblTotal
-      mostrarTexto("lblTotal", valorTotal);
+    mostrarTexto("lblTotal", valorTotal);
     /*
         Caso de prueba: 
             - cantidad: 10

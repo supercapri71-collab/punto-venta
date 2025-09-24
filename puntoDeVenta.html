@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="utilitarios.js"></script>
-        <script src="serviciosPuntoDeVenta.js"></script>
-        <script src="puntoDeVenta.js"></script>
-    </head>
-    <body>
-        <h3>Ingrese el nombre del producto</h3>
-        <input type="text" id="txtProducto"/>
-        <h3>Ingrese la cantidad a comprar</h3>
-        <input type="text" id="txtCantidad"/>
-        <h3>Ingrese el precio del producto</h3>
-        <input type="text" id="txtPrecio"/>
-        <h3>Ingrese el porcentaje de descuento</h3>
-        <input type="text" id="txtPorcentajeDescuento"/>
-        <h3>Subtotal</h3>
-        <h3 id="lblSubtotal">0.0</h3>
-        <h3>Descuento</h3>
-        <h3 id="lblDescuento">0.0</h3>
-        <h3>IVA 12%</h3>
-        <h3 id="lblValorIVA">0.0</h3>
-        <h3>Total</h3>
-        <h3 id="lblTotal">0.0</h3>
 
-        <input type="button" value="CALCULAR TOTAL" 
-        onclick="calcularValorTotal()"/>
-    
-    </body> 
+<head>
+    <h1 class="titulo"> PUNTO DE VENTA </h1>
+    <script src="utilitarios.js"></script>
+    <script src="serviciosPuntoDeVenta.js"></script>
+    <script src="puntoDeVenta.js"></script>
+    <link rel="stylesheet" href="convencio.css" />
+</head>
+
+<body>
+    <div class="ingresoDatos">
+        <h3 class="tituloCampo">Ingrese el nombre del producto</h3>
+        <input class="cajaTexto" type="text" id="txtProducto" />
+    </div>
+    <div class="ingresoDatos">
+        <h3 class="tituloCampo">Ingrese la cantidad a comprar</h3>
+        <input class="cajaTexto" type="text" id="txtCantidad" />
+    </div>
+    <div class="ingresoDatos">
+        <h3 class="tituloCampo">Ingrese el precio del producto</h3>
+        <input class="cajaTexto" type="text" id="txtPrecio" />
+    </div>
+    <div class="ingresoDatos">
+        <h3 class="tituloCampo">Ingrese el porcentaje de descuento</h3>
+        <input class="cajaTexto" type="text" id="txtPorcentajeDescuento" />
+    </div>
+    <div class="tituloCampo">
+        <h3>Subtotal </h3>
+        <h3 id="lblSubtotal"> 0.0</h3>
+    </div>
+    <div class="tituloCampo">
+        <h3 class="tituloCampo">Descuento </h3>
+        <h3 id="lblDescuento"> 0.0</h3>
+    </div>
+    <div class="tituloCampo">
+        <h3>IVA 12% :  </h3>
+        <h3 id="lblValorIVA"> 0.0</h3>
+    </div>
+    <div class="tituloCampo">
+        <h3>Total : </h3>
+    <h3 id="lblTotal"> 0.0</h3>
+    </div>
+    <input class="estiloBoton" type="button" value="CALCULAR TOTAL" onclick="calcularValorTotal()" />
+
+</body>
+
 </html>
-
